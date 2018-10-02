@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addMovie } from '../../actions/actions';
+import './addMovie.scss';
 
 const AddMovie = ({ dispatch }) => {
   let inputTitle;
@@ -27,11 +28,25 @@ const AddMovie = ({ dispatch }) => {
           );
           inputTitle.value = '';
           inputYear.value = '';
-        }}>
-        <input ref={node => (inputTitle = node)} placeholder="Title" />
-        <input ref={node => (inputYear = node)} placeholder="Year" />
-
-        <button type="submit">Add Movie</button>
+        }}
+      >
+        <div id="add-container">
+          <table>
+            <tbody>
+              <tr>
+                <td className="col-year">
+                  <input ref={node => (inputYear = node)} placeholder="Year" />
+                </td>
+                <td className="col-title">
+                  <input ref={node => (inputTitle = node)} placeholder="Title" />
+                </td>
+                <td className="col-actions">
+                  <button type="submit">ADD MOVIE</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </form>
     </div>
   );

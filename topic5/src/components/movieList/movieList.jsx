@@ -1,14 +1,24 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Movie from '../movie';
+import './movieList.scss';
 
 const MovieList = props => (
-  <div>
-    <ul>
-      {props.movies.map((m, index) => (
-        <Movie key={index} id={index} movie={m} />
-      ))}
-    </ul>
+  <div id="movies-container">
+    <table>
+      <thead>
+        <tr>
+          <th className="col-year">YEAR</th>
+          <th className="col-title">TITLE</th>
+          <th className="col-actions" />
+        </tr>
+      </thead>
+      <tbody>
+        {props.movies.map((m, index) => (
+          <Movie key={index} id={index} movie={m} />
+        ))}
+      </tbody>
+    </table>
   </div>
 );
 

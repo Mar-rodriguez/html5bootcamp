@@ -1,0 +1,26 @@
+#movies-container {
+  table{
+    width: 700px;
+    text-align: left;
+    
+    thead th{
+      height: 60px;
+      font-size: 20px;
+    }
+
+    td {
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  .col-year {
+    width: 70px;
+  }
+  
+  .col-actions {
+    width: 110px;
+
+  }
+}

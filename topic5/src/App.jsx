@@ -1,5 +1,6 @@
 import React from 'react';
 import './app.scss';
+import { hot } from 'react-hot-loader';
 import Landing from './pages/landing/landing';
 
 const App = () => (
@@ -7,4 +8,4 @@ const App = () => (
     <Landing />
   </div>
 );
-export default App;
+export default hot(module)(App);

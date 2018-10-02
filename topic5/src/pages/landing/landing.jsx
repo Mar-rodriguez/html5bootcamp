@@ -7,8 +7,12 @@ import './landing.scss';
 const Landing = () => (
   <div className="Landing">
     <div className="Landing--content">
-      <MovieList />
-      <AddMovie />
+      <section>
+        <MovieList />
+      </section>
+      <section>
+        <AddMovie />
+      </section>
     </div>
   </div>
 );
